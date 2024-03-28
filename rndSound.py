@@ -28,7 +28,7 @@ def play_stop():
 
 
 def pause(p_time):
-    time.wait(p_time * 1000)  # * 100 to convert it to 10 or 20 seconds
+    time.wait(p_time * 1000)  # * 1000 to convert it to 10 or 20 seconds
 
 
 def pause_quee(q_type):
@@ -56,6 +56,7 @@ def settings():
         else:
             print(" !! You typed something wrong. Can you retry.")
             pause_setting = 0
+    print(" -- started")
     return que_setting, pause_setting
 
 
@@ -65,7 +66,6 @@ def main(q, p, n) -> None:
     pause(p)
     play_stop()
     print(f"-{n}-")
-    n =+ 1
 
 
 if __name__ == "__main__":
@@ -76,3 +76,5 @@ if __name__ == "__main__":
     count = 1
     while(True):
         main(p_settings[0], p_settings[1], count)
+        count += 1
+
